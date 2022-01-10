@@ -1,0 +1,39 @@
+.searchbox {
+	width: 400px;
+	height: 36px;
+}
+
+.searchbox-btn {
+	height: 36px;
+	width: 80px;
+	position: absolute;
+	background-color: seagreen;
+	border: none;
+	color: white;
+
+}
+.linkbox-ul {
+	list-style: none;
+	background-color: white;
+	border: 1px solid darkgray;
+	margin-top: 25px;
+	font-size: 16px;
+	line-height: 35px;
+	padding: 10px;
+	width: 300px;
+}
+
+.linkbox-li span {
+	display: inline-block;
+}
+
+.title {
+	font-weight: bold;
+	color: dimgray;
+}
+
+
+.btn-success{
+	background-color: #FFD8C8;
+	border-color: #FFD8C8;
+}

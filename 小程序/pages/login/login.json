@@ -1,0 +1,24 @@
+{
+  "usingComponents": {},
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/login/login",
+      "text": "首页",
+      "iconPath": "icon/学校.png",
+      "selectedIconPath": "icon/学校.png"
+    },{
+      "pagePath": "pages/user/exam/exam_appointment/exam_appointment",
+      "text": "体检",
+      "iconPath": "icon/通知公告.png",
+      "selectedIconPath": "icon/通知公告.png",
+      "selectedColor": "#0094ff"
+    },{
+      "pagePath": "pages/user/user_info/userinfo",
+      "text": "我的",
+      "iconPath": "icon/学生.png",
+      "selectedIconPath": "icon/学生.png"
+    }
+  ],
+  "selectedColor": "#0094ff"
+  }
+}

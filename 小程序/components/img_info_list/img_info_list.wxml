@@ -1,0 +1,17 @@
+
+<view class="img_info_list"
+wx:for="{{doctors}}" wx:key="id" 
+data-index="{{index}}">
+
+<view class="img">
+<image mode="widthFix" src="{{item.src}}"></image>
+</view>
+<view class="info">
+<view>{{item.doctorid}}</view>
+<view>{{item.doctorname}}</view>
+<view>{{item.describes}}</view>
+<navigator class="intoinfo" 
+url="/pages/user/doctorinfo/doctorinfos?id={{index}}"data-index="{{index}}">详细信息</navigator>
+
+</view>
+</view>

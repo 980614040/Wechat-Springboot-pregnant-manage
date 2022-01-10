@@ -1,0 +1,27 @@
+
+<form>
+<title>{{doctor.doctorname}}</title>
+<view class="top">
+  <view class="info">
+<view>
+年龄：
+{{doctor.age}}
+</view>
+<view >
+  医师证：
+{{doctor.post}}</view>
+</view>
+<view class="img">
+<image mode="widthFix" src="{{doctor.src}}"></image>
+</view>
+</view>
+<view class="middle">
+  <title>个人简介：</title>
+  <view>{{doctor.describes}}</view>
+  
+</view>
+
+<navigator wx:if="{{checkuserstyle=='user'}}" form-type="submit" class="intoinfo"
+url="/pages/user/exam/exam_select/exam_select">预约医生</navigator>
+<navigator wx:if="{{checkuserstyle=='admin'}}" form-type="submit" bindtap="deletedoctor" class="intoinfo">删除医生</navigator>
+</form>

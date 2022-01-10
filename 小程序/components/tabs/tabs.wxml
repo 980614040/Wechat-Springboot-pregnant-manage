@@ -1,0 +1,14 @@
+<view class="tabs">
+<view class="tabs_title">
+<view class="title_item active">全部</view>
+<view class="title_item">周一</view>
+<view class="title_item">周二</view>
+<view class="title_item">周三</view>
+<view class="title_item">周四</view>
+<view class="title_item">周五</view>
+<view class="title_item">周六</view>
+<view class="title_item">周日</view>
+</view>
+</view>
+
+

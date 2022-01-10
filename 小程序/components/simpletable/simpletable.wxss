@@ -1,0 +1,38 @@
+.table {
+  border: 0px solid darkgray;
+  
+ }
+ .tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 300rpx;
+  padding: 10rpx;
+  align-items: center;
+ }
+ .td {
+  width:40%;
+  justify-content: center;
+  text-align: center;
+ }
+ .bg-w{
+  background: rgb(255, 255, 255);
+ }
+ .bg-g{
+  background: #e8fff9;
+ }
+ .th {
+  width: 40%;
+  justify-content: center;
+  background:  rgb(175, 252, 175);
+  color: rgb(0, 0, 0);
+  display: flex;
+  height: 300rpx;
+  align-items: center;
+ }
+ navigator{
+   background-color: rgb(175, 252, 175);
+   padding: 10rpx;
+   margin-left: 50rpx;
+   margin-right: 50rpx;
+ }

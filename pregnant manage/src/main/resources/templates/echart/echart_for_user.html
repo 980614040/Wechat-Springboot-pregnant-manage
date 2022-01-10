@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/echarts.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap-theme.min.css}" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet"  th:href="@{/css/admin/admin_home.css}" href="css/admin/admin_home.css">
+
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div class="row-fluid">
+    <div class="span12">
+        <h3 class="title">
+            孕妇体检管理系统
+        </h3>
+    </div>
+</div>
+<div class="container-fluid">
+
+    <div class="row-fluid">
+        <div class="span4" style="float: left;width: 250px;">
+            <ul class="nav nav-list well list_link">
+
+                <li class="active">
+                    <a href="show_admin_home_pc">首页</a>
+                </li>
+                <li>
+                    <a th:href="@{query_user_list_pc(current_page=${1},
+                                      page_size=${10},
+                                      field_name=${'default'},
+                                      field_value=${'all'}
+                                      )}">孕妇列表</a>
+                </li>
+                <li>
+                    <a th:href="@{query_doctor_list_pc(current_page=${1},
+                                      page_size=${10},
+                                      field_name=${'default'},
+                                      field_value=${'all'}
+                                      )}">医生列表</a>
+                </li>
+
+                <li>
+                    <a href="#">资料</a>
+                </li>
+                <li>
+                    <a href="#">设置</a>
+                </li>
+
+                <li>
+                    <a href="#">帮助</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="span8" style="float: left;width: 69%;">
+            <div class="small_title">体检图表</div>
+            <div id="main" style="width: 100%;height:400px;"></div>
+            <input type="hidden" th:value="${weights}" id="weights"/>
+            <input type="hidden" th:value="${abdominal_girths}" id="abdominal_girths"/>
+            <input type="hidden" th:value="${blood_pressures}" id="blood_pressures"/>
+            <input type="hidden" th:value="${fetal_hearts}" id="fetal_hearts"/>
+            <input type="hidden" th:value="${uterine_heights}" id="uterine_heights"/>
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myChart = echarts.init(document.getElementById('main'));
+
+                var weights=$("#weights").val();
+                var weights=weights.split(",");
+                // console.log(typeof (weights))
+                // console.log(weights)
+                // for (var i=0;i<weights.length;i++)
+                // {
+                // console.log(weights[i]);
+                // }
+
+               //  var weights=[123, 150, 170, 180, 200, 300, 300, 300, 300]
+               //  console.log(weights)
+                var abdominal_girths=$("#abdominal_girths").val();
+                var abdominal_girths=abdominal_girths.split(",");
+
+                var blood_pressures=$("#blood_pressures").val();
+                var blood_pressures=blood_pressures.split(",");
+
+                var fetal_hearts=$("#fetal_hearts").val();
+                var fetal_hearts=fetal_hearts.split(",");
+
+                var uterine_heights=$("#uterine_heights").val();
+                var uterine_heights=uterine_heights.split(",");
+
+
+
+
+
+
+                // 指定图表的配置项和数据
+                option = {
+                    title: {
+                        text: '孕妇指标变化图'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data: ['体重', '胎心', '血压', '宫高', '腹围']
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    toolbox: {
+                        feature: {
+                            saveAsImage: {}
+                        }
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['第12周', '第16周', '第20周', '第24周', '第28周', '第30周', '第32周', '第34周', '第38周']
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [
+                        {
+                            name: '体重',
+                            type: 'line',
+
+                            data: weights
+                        }
+                        ,
+                        {
+                            name: '胎心',
+                            type: 'line',
+
+                            data: fetal_hearts
+                        },
+                        {
+                            name: '血压',
+                            type: 'line',
+
+                            data: blood_pressures
+                        },
+                        {
+                            name: '宫高',
+                            type: 'line',
+
+                            data: uterine_heights
+                        },
+                        {
+                            name: '腹围',
+                            type: 'line',
+
+                            data: abdominal_girths
+                        }
+                    ]
+                };
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            </script>
+        </div>
+    </div>
+</div>
+<!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+
+</body>
+</html>

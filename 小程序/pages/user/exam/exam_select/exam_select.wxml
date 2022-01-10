@@ -1,0 +1,16 @@
+<form>
+<date-picker class="clander"
+    startTime="{{startTime}}" 
+    endTime="{{endTime}}"
+    unit="{{unit}}"
+    reserveUnit="{{reserveUnit}}"
+    unreserveTime="{{unreserveTime}}"
+    activedConst="{{activedConst}}"
+    disabledConst="{{disabledConst}}"
+    themeColor="#1f78d1"
+    bind:selectTime="onSelectTime"
+/>
+
+<navigator bindtap="checktime" form-type="submit" class="checkdate">预约</navigator>
+</form>
+<view class="white"></view>

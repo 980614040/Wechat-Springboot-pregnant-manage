@@ -1,0 +1,23 @@
+<title>{{user.username}}</title>
+<view class="top">
+<view class="info">
+<view>
+年龄：
+{{user.age}}
+</view>
+<view >
+  怀孕时间：
+{{user.pregnant_time}}</view>
+</view>
+<view class="img">
+<image mode="widthFix" src="{{user.src}}"></image>
+</view>
+</view>
+<view class="middle">
+  <title>个人信息：</title>
+  <view>{{user.describes}}</view>
+  
+</view>
+
+<navigator class="intoinfo"
+url="/pages/user/exam/exam_report/exam_report">编辑报告</navigator>

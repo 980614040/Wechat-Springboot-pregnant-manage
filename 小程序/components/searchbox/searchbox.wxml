@@ -1,0 +1,13 @@
+<view class='search'>
+        <view class='searchItem'>
+            <image src="../../icon/放大镜.png" ></image>
+            <input type="text" class="weui-search-bar__input" placeholder="请输入查询信息" value="{{inputVal}}" bindinput="inputTyping" class='flex1 mar-l'
+            bindconfirm="search" />
+   
+            <scroll-view class='scroll-view' wx:if='{{viewShowed}}' scroll-y>
+      <view wx:for="{{carList}}" wx:key="{{index}}" class="msg-item " >
+        <view class='user-name' bindtap='name' data-index="{{index}}" >{{item}}</view>
+      </view>
+      </scroll-view>
+        </view>
+    </view>

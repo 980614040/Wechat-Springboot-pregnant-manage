@@ -1,0 +1,59 @@
+/* components/searchbox/searchbox.wxss */
+.search{
+  border: 1px solid black;
+  border-radius: 50rpx;
+  height: 80rpx;
+  margin: 40rpx;
+  
+}
+view.searchItem image {
+  height: 42rpx;
+  width: 42rpx;
+  align-self: center;
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+}
+view.searchItem input {
+  flex: 1;
+  font-size: 30rpx;
+  
+}
+view.search {
+  display: flex;
+  flex-direction: row;
+  height: 98rpx;
+  
+  align-items: center;
+}
+
+view.searchItem {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  flex-direction: row;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+.scroll-view {
+  width: 83%;
+  position: absolute;
+  top: 200rpx;
+  
+  background-color: white;
+  -moz-box-shadow: 0px 0px 2px #e2e2e2;
+  -webkit-box-shadow: 0px 0px 2px #e2e2e2;
+  box-shadow: 0px 0px 2px #e2e2e2;
+}
+.msg-item {
+  width: 100%;
+}
+.weui-search-bar__input {
+  height: 72rpx;
+}
+.user-name {
+  width: 90%;
+  padding: 20rpx;
+  font-size: 33rpx;
+  border-bottom: 1px solid #e2e2e2;
+}

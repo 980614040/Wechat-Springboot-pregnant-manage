@@ -1,0 +1,281 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: PingFangSC-Medium;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+    tap-highlight-color: hsla(0,0%,100%,0);
+}
+.title-line {
+    width: 980px;
+    height: 28px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 28px;
+    text-align: center;
+}
+.title-line .tit {
+    height: 56px;
+    line-height: 56px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 40px;
+    background: #efede7;
+    text-align: center;
+}
+.login-box {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+}
+.login-box .login-left {
+    float: left;
+    width: 489px;
+}
+.qrcode-login {
+    position: relative;
+    width: 480px;
+}
+.qrcode-login .qrcode-con {
+    padding-top: 72px;
+}
+.qrcode-login .qrcode-con .tv-icon {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 160px;
+    top: 10px;
+    background: url(//i0.hdslb.com/bfs/static/e6f2388….png) no-repeat;
+}
+i {
+    font-style: normal;
+}
+.qrcode-login .qrcode-con .qrcode-box {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    background: #ddd;
+    position: relative;
+}
+.qrcode-login .qrcode-con .qrcode-box .qrcode-tips {
+    z-index: 10;
+    position: absolute;
+    width: 480px;
+    height: 192px;
+    top: -50px;
+    left: 50%;
+    margin-left: -240px;
+    background: url(//s1.hdslb.com/bfs/static/passport/static/img/qr-tip.a64967e.png) no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    transition: opacity .5s;
+}
+.qrcode-login .qrcode-con .qrcode-box .qrcode-img {
+    width: 140px;
+    height: 140px;
+    background: url(//s1.hdslb.com/bfs/static/passport/static/img/loadTV.99606e2.gif) 50% no-repeat;
+}
+a, img {
+    border: none;
+}
+.qrcode-login .qrcode-con .qrcode-box .status {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0,0%,100%,.8);
+}
+.qrcode-login .qrcode-con .qrcode-box .status .overdue {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAABLCAYAAADpqX6aAAAAGXRFW…juZ325RaSjNf2XRp+L+1nrytMSa4m1xFpiLbFTXOxvAQYATXs+1rA84iYAAAAASUVORK5CYII=) 8px 3px no-repeat #fff;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 10px rgba(0,0,0,.5);
+    box-shadow: 0 3px 10px rgba(0,0,0,.5);
+    cursor: pointer;
+    margin: 40px auto;
+    width: 60px;
+    padding: 40px 0 5px;
+    color: #0594c7;
+    text-align: center;
+}
+.qrcode-login .qrcode-footer {
+    width: 480px;
+    height: 155px;
+
+}
+.qrcode-login .qrcode-footer .status-txt {
+    padding-top: 20px;
+    text-align: center;
+    color: #222;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+.qrcode-login .qrcode-footer .app-link, .qrcode-login .qrcode-footer .suc-txt {
+    text-align: center;
+    color: #717171;
+    font-size: 14px;
+}
+a {
+    text-decoration: none;
+}
+.login-box .line {
+    float: left;
+    border-right: 1px solid #ddd;
+    height: 300px;
+    margin-top: 28px;
+}
+.login-box .login-right {
+    float: left;
+    padding-left: 45px;
+    width: 490px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: absolute;
+    left: 500px;
+    top: 20px;
+}
+
+.form-login {
+    position: relative;
+}
+.form-login .input-box {
+    margin-top: 50px;
+    width: 414px;
+}
+.form-login .input-box {
+    margin-top: 50px;
+    width: 414px;
+}
+.status-box {
+    position: relative;
+}
+.form-login .input-box .item input {
+    width: 388px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #aaa;
+    font-size: 14px;
+    padding: 10px;
+    height: 18px;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+input, select {
+    outline: none;
+}
+.status-box .status {
+    display: none;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAABgCAYAAABLwH3pAAAAGXRFW…ICIAgKgCAoAIKgAAiCAiAICoAgKACCoAAIggIgiFmE/wswAJ4FV7zvyrR7AAAAAElFTkSuQmCC);
+    position: absolute;
+    top: 8px;
+    right: -25px;
+    width: 20px;
+    height: 20px;
+}
+.form-login .input-box .text {
+    margin: 6px 0;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+}
+.form-login .input-box .text .tips {
+    color: #f66495;
+    float: left;
+}
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+.form-login .input-box .remember {
+    margin: 10px 0;
+    color: #717171;
+    width: 410px;
+    font-size: 12px;
+}
+.form-login .input-box .remember .forget-password {
+    float: right;
+}
+.form-login .input-box .remember .not-checkout {
+    float: right;
+    margin-right: 10px;
+}
+.form-login .input-box .btn-box .btn-login {
+    border: 1px solid #0381aa;
+    color: #fff;
+    background-color: #00a7de;
+    margin-left:34px;
+
+}
+.form-login .input-box .btn-box .btn {
+    color: #555;
+    display: inline-block;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 184px;
+    line-height: 38px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+
+}
+.form-login .input-box .btn-box .btn-reg {
+    margin-left: 34px;
+    background-color: white;
+}
+.form-login .input-box .sns {
+    padding: 12px 0;
+    font-size: 12px;
+}
+.form-login .input-box .sns .btn {
+    color: #717171;
+}
+
+.form-login .input-box .sns .btn.weibo:before {
+    background-position: 0 0;
+}
+.form-login .input-box .sns .btn:before {
+    content: "";
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAA+CAYAAADEfFBjAAAAGXRFW…POeqzPDtAqMC60QfE4OROxHmHGjuZNzv5FUckZedT4jwADAJ69YFxh1FLBAAAAAElFTkSuQmCC);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.form-login .input-box .sns .btn.qq {
+    margin-left: 20px;
+}
+.form-login .input-box .remember span {
+    color: #bbb;
+    margin-left: 10px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+a {
+    text-decoration: none;
+}
+a, img {
+    border: none;
+}
+a:-webkit-any-link {
+    color: #265A88;
+    cursor: pointer;
+    text-decoration: none;
+}
+a {
+}
+.btn-box{margin-left: 40px;}

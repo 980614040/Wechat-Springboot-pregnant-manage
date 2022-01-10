@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="css/bootstrap.min.css" />
+<link rel="stylesheet" th:href="@{/css/bootstrap-theme.min.css}" href="css/bootstrap-theme.min.css"/>
+<link rel="stylesheet"  th:href="@{/css/admin/admin_home.css}" href="css/admin/admin_home.css">
+<script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+<body>
+<div class="row-fluid">
+    <div class="span12">
+        <h3 class="title">
+            孕妇体检管理系统
+        </h3>
+    </div>
+</div>
+<div class="container-fluid">
+
+    <div class="row-fluid">
+        <div class="span4" style="float: left;width: 250px;">
+            <ul class="nav nav-list well list_link">
+
+                <li class="active">
+                    <a href="show_admin_home_pc">首页</a>
+                </li>
+                <li>
+                    <a th:href="@{query_user_list_pc(current_page=${1},
+                                      page_size=${10},
+                                      field_name=${'default'},
+                                      field_value=${'all'}
+                                      )}">孕妇列表</a>
+                </li>
+                <li class="active"><a href="#">医生列表</a></li>
+                <li>
+                    <a th:href="@{show_papers_pc(current_page=${1},
+                                      page_size=${10},
+                                      field_name=${'default'},
+                                      field_value=${'all'}
+                                      )}">报告管理</a>
+                </li>
+                <li>
+                    <a href="#">设置</a>
+                </li>
+
+                <li>
+                    <a href="#">帮助</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="span8" style="float: left;width: 69%;">
+            <div class="small_title">医生列表</div>
+            <table class="table table-bordered">
+
+
+                <form action="query_user_list_pc" method="get">
+
+                    <input th:name="current_page" th:value="1" type="hidden"/>
+                    <input th:name="page_size" th:value="10" type="hidden"/>
+                </form>
+                <thead>
+                <tr>
+                    <th>
+                        编号
+                    </th>
+                    <th>
+                        用户id
+                    </th>
+                    <th>
+                        姓名
+                    </th>
+                    <th>
+                        职位
+                    </th>
+                    <th>
+                        性别
+                    </th>
+                    <th>
+                        年龄
+                    </th>
+                    <th>
+                        工龄
+                    </th>
+                    <th>
+                        个人描述
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+                </thead>
+                <tbody th:each="a_doctor, itemStat: ${doctors}">
+                <tr>
+                    <td th:text="${itemStat.index + 1}"></td>
+                    <td th:text="${a_doctor.doctorid}"></td>
+                    <td th:text="${a_doctor.doctorname}"></td>
+                    <td th:text="${a_doctor.post}"></td>
+                    <td th:text="${a_doctor.sex}"></td>
+                    <td th:text="${a_doctor.age}"></td>
+                    <td th:text="${a_doctor.workyear}"></td>
+                    <td th:text="${a_doctor.describes}"></td>
+                    <td><a th:href="@{show_edit_doctor_pc(doctorid=${a_doctor.doctorid},
+                                        current_page=${current_page},
+                                        page_size=${page_size},
+                                        field_name=${field_name},
+                                        field_value=${field_value})}">修改</a>
+                        <a th:href="@{delete_doctor_pc(doctorid=${a_doctor.doctorid},
+                                      current_page=${current_page},
+                                      page_size=${page_size},
+                                      field_name=${field_name},
+                                      field_value=${field_value})}">删除</a></td>
+                </tr>
+
+                </tbody>
+            </table>
+            <div style="margin-left: 30%">
+            <div style="margin-left:20px;float: left"><a th:if="${current_page}>0" th:href="@{query_doctor_list_pc(current_page=${current_page - 1},
+                                      page_size=${page_size},
+                                      field_name=${field_name},
+                                      field_value=${field_value}
+                                      )}">上一页</a></div>
+            <div style="margin-left: 20px; float: left"><a th:href="@{query_doctor_list_pc(current_page=${current_page + 1},
+                                      page_size=${page_size},
+                                      field_name=${field_name},
+                                      field_value=${field_value}
+                                      )}">下一页</a></div>
+            <div style="margin-left: 20px; float: left"><a th:href="@{show_add_doctor_pc(current_page=${current_page},
+                                      page_size=${page_size},
+                                      field_name=${field_name},
+                                      field_value=${field_value})}">添加</a></div>
+            </div>
+<!--            <div class="alert">-->
+
+<!--                <h4>-->
+<!--                    提示!-->
+<!--                </h4>-->
+<!--                <strong th:if="${doctorlist_option}==first">请不要随意修改数据</strong>-->
+<!--                <strong th:if="${doctorlist_option}=='d_delete'">删除成功</strong>-->
+<!--                <strong th:if="${doctorlist_option}=='d_insert'">添加成功</strong>-->
+<!--            </div>-->
+        </div>
+    </div>
+</div>	</body>
+
+</body>
+</html>

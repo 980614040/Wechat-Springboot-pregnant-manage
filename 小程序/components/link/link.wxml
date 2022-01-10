@@ -1,0 +1,8 @@
+<view class="section">
+<view class="tui-table-view">
+<view bindtap="checklink"  wx:for="{{link}}" wx:key="id" class="tui-col-3" data-index="{{index}}">
+<image src="{{item.src}}"></image>
+<view>{{item.name}} </view>
+</view>
+</view>
+</view>

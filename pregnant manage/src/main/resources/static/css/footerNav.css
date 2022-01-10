@@ -1,0 +1,121 @@
+.footerNav {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 0;
+}
+.paddingValue {
+    padding: 55px 0 90px;
+    border-bottom: 1px solid none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+    transition: all;
+    -o-transition: all;
+    -ms-transition: all;
+    -moz-transition: all;
+    -webkit-transition: all;
+}
+div {
+    display: block;
+}
+.footerNav .footerNav_box {
+    width: 100%;
+    margin: 0 auto;
+}
+.footerNav .footerNav_box .footerNav_box_left {
+	float: left;
+	overflow: hidden;
+    border-right: 1px solid #ff9966;
+}
+.footerNav .footerNav_box .footerNav_box_right {
+	float: left;
+    padding-left: 25px;
+    width: 380px;
+}
+.footerNav .footerNav_box .footerNav_box_left ul {
+    margin-right: 35px;
+    float: left;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.footerNav .footerNav_box .footerNav_box_left ul li.title {
+    font-size: 18px;
+    line-height: 35px;
+    border-bottom: 2px solid #ff9966;
+    text-align: center;
+    margin-bottom: 10px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.footerNav .footerNav_box .footerNav_box_left ul li a {
+    color: #4d4d4d;
+    font-size: 12px;
+    line-height: 25px;
+    text-decoration:none ;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.footerNav .footerNav_box .footerNav_box_right h5 {
+    font-size: 25px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.footerNav .footerNav_box .footerNav_box_right p.info {
+    color: #000;
+    font-size: 12px;
+    line-height: 25px;
+}
+.footerNav .footerNav_box .footerNav_box_right h5 i {
+    color: #ff9966;
+}
+em, i, strong {
+    font-style: normal;
+}
+
+element.style {
+}
+.footerNav .footerNav_box .footerNav_box_right .hotline {
+    margin-top: 20px;
+    overflow: hidden;
+    padding-left: 50px;
+}
+.footerNav .footerNav_box .footerNav_box_right .hotline p.callTitle {
+    color: #000;
+    font-weight: 400;
+    font-size: 14px;
+}
+.footerNav .footerNav_box .footerNav_box_right .hotline p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff9966;
+}
+.footer .footer_box_right_child {
+    background-size: 151px 166px;
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    width: 151px;
+    height: 166px;
+    margin-left: -75px;
+    text-align: center;
+    display: none;
+}
+.footerNav .footerNav_box .footerNav_box_left ul li a:hover{
+	
+	color: #ffcccc;
+}

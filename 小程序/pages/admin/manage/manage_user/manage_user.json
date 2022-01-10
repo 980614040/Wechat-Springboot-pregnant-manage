@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "searchbox":"../../../../components/searchbox/searchbox",
+    "img_info_list":"../../../../components/img_info_list_user/img_info_list"
+  }
+}

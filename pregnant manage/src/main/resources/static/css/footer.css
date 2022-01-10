@@ -1,0 +1,85 @@
+.footer {
+    padding: 15px 0 25px 0;
+}
+.footer {
+    width: 100%;
+    height: auto;
+    background: rgb(220,87,18);
+    padding: 45px 0 55px 0;
+    height: 300px;
+}
+.footer .footer_box {
+    width: 1050px;
+    margin: 0 auto;
+    color: #fff;
+}
+.footer_box_left {
+    width: 100%;
+    text-align: center;
+}
+.footer .footer_box .footer_box_left a {
+    margin-bottom: 20px;
+    overflow: hidden;
+    color: #fff;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.footer .footer_box .footer_box_left p {
+    line-height: 25px;
+    font-size: 12px;
+    width: 100%;
+    margin-top: 10px;
+}
+.footer_box_left p, .footer_box_right p {
+    display: ;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.footer .footer_box .footer_box_right {
+    float: none;
+    width: 276px;
+    margin: 0 auto;
+}
+.footer .footer_box .footer_box_right {
+    float: right;
+    font-size: 16px;
+}
+.footer .footer_box .footer_box_right a {
+    float: left;
+    margin: 25px 16px 0;
+    position: relative;
+}
+.footer_box_right a {
+    float: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+.copy {
+    width: 100%;
+    overflow: hidden;
+    background: #f8f8f8;
+    line-height: 25px;
+}
+.copy .copy_box {
+    width: 1050px;
+    margin: 0 auto;
+    color: #6b6b6b;
+    font-size: 12px;
+}
+.copy .copy_box .copy_box_left {
+    float: left;
+}
+.copy .copy_box .copy_box_right {
+    float: right;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "link":"../../components/link/link"
+  }
+}

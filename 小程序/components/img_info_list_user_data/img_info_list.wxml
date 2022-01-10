@@ -1,0 +1,18 @@
+
+<view class="img_info_list"
+wx:for="{{users}}" wx:key="id" 
+data-index="{{index}}">
+<view class="img">
+<image mode="widthFix" src="{{item.src}}"></image>
+</view>
+<view class="info">
+
+<view>姓名：{{item.username}}</view>
+<view>怀孕时间：{{item.pregnant_time}}</view>
+<view>个人简介：{{item.describes}}</view>
+
+<button bindtap="gotochart" class="intoinfo"
+data-index="{{index}}">查看图表</button>
+
+</view>
+</view>

@@ -1,0 +1,5 @@
+<title>医生列表</title>
+
+<searchbox list1="{{doctors}}" checkuserstyle="user"></searchbox>
+
+<img_info_list doctors="{{doctors}}"></img_info_list>

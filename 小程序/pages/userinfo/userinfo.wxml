@@ -1,0 +1,32 @@
+
+<view class="user_info_wrap">
+<view class="user_img_wrap">
+<view wx:if="{{checkuserstyle=='admin'}}">
+  <image class="user_icon" src="../../icon/用户.png"> </image>
+  <view  class="user_name" >{{user[0].adminname}}</view>
+</view>
+<view wx:if="{{checkuserstyle=='doctor'}}">
+  <image class="user_icon" src="{{user[0].src}}"> </image>
+  <view  class="user_name" >{{user[0].doctorname}}</view>
+  </view>
+  <view wx:if="{{checkuserstyle=='user'}}">
+  <image class="user_icon" src="{{user[0].src}}"> </image>
+  <view  class="user_name">{{user[0].username}}</view>
+  </view>
+
+</view>
+</view>
+
+<link link="{{link}}" bindchecklink="linkitemChange" class="link"></link>
+<view class="bottom">
+<view>
+111
+</view>
+<view>
+111
+</view>
+
+<view bindtap="exit" class="exit iconfont icon-tuichu">
+退出登录
+</view>
+</view>

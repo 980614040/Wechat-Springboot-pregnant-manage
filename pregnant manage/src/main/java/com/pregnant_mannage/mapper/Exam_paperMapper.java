@@ -1,0 +1,35 @@
+package com.pregnant_mannage.mapper;
+
+import com.pregnant_mannage.entity.Exam_paper;
+import com.pregnant_mannage.entity.User;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+@Mapper
+@Repository
+public interface Exam_paperMapper {
+
+    //film_play_status是正在热映还是即将上映，number要显示的数量
+//    Exam getExamByExamid(@Param("Examid") String Examid);
+//
+//    Exam checkloginExam(@Param("Examid") String Examid,@Param("pwd") String pwd);
+
+    @Select("select * from Exam_paper,doctor ${where_condition}")
+    List<Exam_paper> queryExam_paperListWhere(
+            @Param("where_condition") String where_condition);
+
+    @Select("select * from Exam_paper ${where_condition}")
+    List<Exam_paper> queryallExam_paperListWhere(
+            @Param("where_condition") String where_condition);
+
+    @Select("select * from Exam_paper ${where_condition} limit #{0},#{1}")
+    List<Exam_paper> queryallExam_paperListWhereaddpage(@Param("0") int current_page,//0, 1, 2,3 是做了一个转换。
+                                                        @Param("1") int page_size,
+                                                        @Param("where_condition") String where_condition);
+
+
+
+}

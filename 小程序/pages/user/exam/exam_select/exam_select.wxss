@@ -1,0 +1,11 @@
+.checkdate{
+
+  background-color: white;
+  height: 100%;
+  text-align: center;
+  border-top: 1rpx solid lightgray;
+  border-bottom: 1rpx solid lightgray;
+}
+.clander{
+  height: 100rpx;
+}

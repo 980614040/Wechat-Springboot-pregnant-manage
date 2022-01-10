@@ -1,0 +1,61 @@
+<!-- user -->
+<form bindsubmit="userSubmit" bindreset="formReset"
+ wx:if="{{userstyle=='user'}}">
+
+<view class="viewtitle">
+  <view>姓名：</view>
+  <view><input type="text" name="username" value="{{user.username}}"/></view>
+</view>
+<view class="viewtitle">
+  <view>年龄：</view>
+  <view><input type="text" name="age" value="{{user.age}}"/></view>
+</view>
+<view class="viewtitle">
+  <view>电话号码：</view>
+  <view><input type="text" name="tel" value="{{user.tel}}"/></view>
+</view>
+<view class="viewtitle">
+  <view>怀孕时间：</view>
+  <view><input type="text" name="pregnant_time" value="{{user.pregnant_time}}"/></view>
+</view>
+<view class="viewtitle last">
+  <view class="simpledescribes">个人描述：</view>
+  <view><textarea cols="5" rows="4" class="viewtitle "  name="describes" value="{{user.describes}}" ></textarea></view>
+</view>
+
+<button bindtap="updateuser" class="button" form-type="submit">保存</button>
+
+</form>
+
+<!-- doctor -->
+<form bindsubmit="doctorSubmit" bindreset="formReset"
+ wx:if="{{userstyle=='doctor'}}">
+
+<view class="viewtitle">
+  <view>姓名：</view>
+  <view><input type="text" name="doctorname" value="{{doctor.doctorname}}"/></view>
+</view>
+<view class="viewtitle">
+  <view>年龄：</view>
+  <view><input type="text" name="age" value="{{doctor.age}}"/></view>
+</view>
+<view class="viewtitle">
+  <view>性别：</view>
+  <view><input type="text" name="sex" value="{{doctor.sex}}"/></view>
+</view>
+<view class="viewtitle">
+  <view>工作时间：</view>
+  <view><input type="text" name="Workyear" value="{{doctor.Workyear}}"/></view>
+</view>
+<view class="viewtitle">
+  <view>医师证编号：</view>
+  <view><input type="text" name="post" value="{{doctor.post}}"/></view>
+</view>
+<view class="viewtitle last">
+  <view class="simpledescribes">个人描述：</view>
+  <view><textarea cols="5" rows="4" class="viewtitle "  name="describes" value="{{doctor.describes}}" ></textarea></view>
+</view>
+
+<button bindtap="updateuser" class="button" form-type="submit">保存</button>
+
+</form>

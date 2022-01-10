@@ -1,0 +1,4 @@
+<title>数据管理</title>
+
+<searchbox list1="{{users}}" checkuserstyle="doctor"></searchbox>
+<img_info_list_data users="{{users}}"></img_info_list_data>

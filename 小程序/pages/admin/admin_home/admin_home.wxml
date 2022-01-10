@@ -1,0 +1,6 @@
+<!--pages/admin/admin_home/admin_home.wxml-->
+<title> 首页</title>
+<searchbox list1="{{searchboxitem}}"checkuserstyle="{{checkuserstyle}}"></searchbox>
+<link link="{{link}}" bindchecklink="linkitemChange"></link>
+
+<title> 资讯</title>

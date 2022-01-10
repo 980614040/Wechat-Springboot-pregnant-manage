@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>admin_home</title>
+</head>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="css/bootstrap.min.css" />
+<link rel="stylesheet" th:href="@{/css/bootstrap-theme.min.css}" href="css/bootstrap-theme.min.css"/>
+<link rel="stylesheet"  th:href="@{/css/admin/admin_home.css}" href="css/admin/admin_home.css">
+<script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+<body>
+<div class="row-fluid">
+    <div class="span12">
+        <h3 class="title">
+            孕妇体检管理系统
+        </h3>
+    </div>
+</div>
+<div class="container-fluid">
+
+    <div class="row-fluid">
+        <div class="span4" style="float: left;width: 250px;">
+            <ul class="nav nav-list well list_link">
+
+                <li class="active">
+                    <a href="show_admin_home_pc">首页</a>
+                </li>
+                <li>
+                    <a th:href="@{query_user_list_pc(current_page=${1},
+                                      page_size=${10},
+                                      field_name=${'default'},
+                                      field_value=${'all'}
+                                      )}">孕妇列表</a>
+                </li>
+
+                <li>
+                    <a th:href="@{query_doctor_list_pc(current_page=${1},
+                                      page_size=${10},
+                                      field_name=${'default'},
+                                      field_value=${'all'}
+                                      )}">医生列表</a>
+                </li>
+
+
+                <li>
+                    <a th:href="@{show_papers_pc(current_page=${1},
+                                      page_size=${10},
+                                      field_name=${'default'},
+                                      field_value=${'all'}
+                                      )}">报告管理</a>
+                </li>
+                <li>
+                    <a href="#">设置</a>
+                </li>
+
+                <li>
+                    <a href="#">帮助</a>
+                </li>
+            </ul>
+        </div>
+        <div class="span8" style="float: left;width: 69%;">
+            <div class="small_title">报告添加</div>
+            <div class="span12 editbox" style="border: 1px solid lightgray;padding: 20px">
+                <form  enctype="multipart/form-data"  action="add_papers_pc" method="post">
+                    选择Excel表格：
+                    <input type="file" name="file"/><br/>
+                    <input type="submit" value="上传"/>
+                </form>
+             </div>
+            <div class="alert">
+                <h4>
+                    提示!
+                </h4>
+
+                <strong th:if="${excel_issuccuse}==null">请添加</strong>
+                <strong th:if="${excel_issuccuse}=='true'">添加成功</strong>
+                <strong th:if="${excel_issuccuse}=='false'">添加失败，请重新添加</strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>	</body>
+
+</body>
+</html>

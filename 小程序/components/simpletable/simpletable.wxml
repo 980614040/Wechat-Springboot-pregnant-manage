@@ -1,0 +1,21 @@
+<view class="table">
+ <view class="tr bg-w">
+ <view class="th">时间</view>
+ <view class="th">项目</view>
+ <view class="th ">操作</view>
+ </view>
+ <view wx:for="{{exam}}"   wx:key="id"  >
+ <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+ <view class="td">{{item.examtime}}</view>
+ <view class="td">{{item.examproject}}</view>
+ <view class="td"  wx:if="{{checkuserstyle=='doctor'}}"><navigator bindtap="insertexam" data-index="{{index}}">录入</navigator></view>
+ <view class="td"  wx:if="{{checkuserstyle=='user'}}"><navigator bindtap="searchexam" data-index="{{index}}">查看</navigator></view>
+</view>
+ <view class="tr" wx:else>
+ <view class="td">{{item.examtime}}</view>
+ <view class="td">{{item.examproject}}</view>
+ <view class="td" wx:if="{{checkuserstyle=='doctor'}}"><navigator bindtap="insertexam" data-index="{{index}}">录入</navigator></view>
+ <view class="td"  wx:if="{{checkuserstyle=='user'}}"><navigator bindtap="searchexam" data-index="{{index}}">查看</navigator></view>
+ </view>
+ </view>
+</view> 

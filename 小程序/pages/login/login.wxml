@@ -1,0 +1,24 @@
+<!--pages/login/login.wxml-->
+<view hidden="{{false}}">
+<view class="title">{{title}}</view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="loginview">
+<view class="loginview_title">登录
+</view>
+<view class="loginview_inputs">
+<text>用户名:</text>
+<input type="text" bindinput="inputuserid" name="user_code"/>
+<text>密码:</text>
+<input type="password" bindinput="inputpwd" name="user_pwd"/>
+</view>
+<radio-group bindchange="checkuserstyle">
+<radio class="checkuserstyle" value="admin">管理员</radio>
+<radio class="checkuserstyle" value="doctor">医生</radio>
+<radio class="checkuserstyle" value="user">用户</radio></radio-group>
+<button  class="login_button" 
+bindtap="logininto" form-type="submit">登录</button>
+<button  class="login_button" 
+bindtap="designinto" >注册</button>
+</view>
+</form>
+</view>

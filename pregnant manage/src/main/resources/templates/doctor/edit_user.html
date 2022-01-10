@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="css/bootstrap.min.css" />
+<link rel="stylesheet" th:href="@{/css/bootstrap-theme.min.css}" href="css/bootstrap-theme.min.css"/>
+<link rel="stylesheet"  th:href="@{/css/admin/admin_home.css}" href="css/admin/admin_home.css">
+<link rel="stylesheet"  th:href="@{/css/admin/edit_user.css}" href="css/admin/edit_user.css">
+<script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+<body>
+<div class="row-fluid">
+    <div class="span12">
+        <h3 class="title">
+            孕妇体检管理系统
+        </h3>
+    </div>
+</div>
+<div class="container-fluid">
+
+    <div class="row-fluid">
+        <div class="span4" style="float: left;width: 250px;">
+            <ul class="nav nav-list well list_link">
+
+                <li class="active">
+                    <a href="show_admin_home_pc">首页</a>
+                </li>
+                <li>
+                    <a th:href="@{query_user_list_pc(current_page=${1},
+                                      page_size=${10},
+                                      field_name=${'default'},
+                                      field_value=${'all'}
+                                      )}">孕妇列表</a>
+                </li>
+                <li>
+                    <a th:href="@{query_doctor_list_pc(current_page=${1},
+                                      page_size=${10},
+                                      field_name=${'default'},
+                                      field_value=${'all'}
+                                      )}">医生列表</a>
+                </li>
+
+                <li>
+                    <a href="#">资料</a>
+                </li>
+                <li>
+                    <a href="#">设置</a>
+                </li>
+
+                <li>
+                    <a href="#">帮助</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="span8 " style="float: left;width: 69%;">
+
+            <div class="small_title">用户信息修改</div>
+            <div class="span12 editbox">
+                <form class="form-horizontal" action="edit_user_pc" method="get">
+                    <div class="control-group">
+                        <label class="control-label" >姓名</label>
+                        <div class="controls">
+                            <input name="username" th:value="${choose_user.username}" type="text" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" >电话号码</label>
+                        <div class="controls">
+                            <input name="tel" th:value="${choose_user.tel}" type="text" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" >怀孕时间</label>
+                        <div class="controls">
+                            <input name="Pregnant_time" th:value="${choose_user.Pregnant_time}" type="text" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" >年龄</label>
+                        <div class="controls">
+                            <input name="age" th:value="${choose_user.age}" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" >年龄</label>
+                        <div class="controls">
+
+                            <textarea name="Describes" th:text="${choose_user.Describes}"rows="3"></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" name="edit_user" class="edit_btn" value="保存"/>
+                </form>
+            </div>
+            <div class="alert">
+                <h4>
+                    提示!
+                </h4>
+
+                <strong th:if="${issuccuse}">修改成功</strong>
+                <strong th:unless="${issuccuse}">修改失败，请检查</strong>
+                </textarea>
+            </div>
+        </div>
+    </div>
+</div>	</body>
+
+</body>
+</html>

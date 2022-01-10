@@ -1,0 +1,37 @@
+/* pages/login/login.wxss */
+
+.title{
+  text-align: center;
+  font-size: 50rpx;
+}
+.loginview{
+  border: 1px solid lightgray;
+  margin-top: 20rpx;
+  margin-left: 70rpx;
+  margin-right: 70rpx;
+  border-radius: 5%;
+  padding: 50rpx;
+}
+.loginview_title{
+  text-align: center;
+  font-size: 50rpx;
+}
+.loginview_inputs input{
+  border: 1rpx solid lightgray;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  padding: 5rpx;
+}
+.login_button{
+text-align: center;
+border: 1rpx solid lightgray;
+margin-top: 50rpx;
+margin-left: 70rpx;
+margin-right: 70rpx;
+}
+.checkuserstyle{
+  margin-top: 30rpx;
+  margin-right: 10rpx;
+  
+  
+}

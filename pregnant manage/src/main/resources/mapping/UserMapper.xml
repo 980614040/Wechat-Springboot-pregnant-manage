@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pregnant_mannage.mapper.UserMapper">
+    <!--和项目中的com.pregnant_mannage.mapper.UserMapper接口建立映射关系-->
+    <!--下面可以写mybatis的各种访问数据库的sql语句-->
+    <!--getAMovieByMovie_id是mapper里面对应定义的接口方法-->
+    <select id="getUserByUserid" resultType="com.pregnant_mannage.entity.User">
+        select *
+        from user
+        where userid=#{userid}
+    </select>
+
+    <select id="checkloginUser" resultType="com.pregnant_mannage.entity.User">
+        select *
+        from User
+        where Userid=#{Userid} and pwd=#{pwd}
+    </select>
+</mapper>

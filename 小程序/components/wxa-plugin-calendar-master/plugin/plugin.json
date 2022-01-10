@@ -1,0 +1,6 @@
+{
+  "publicComponents": {
+    "date-picker": "components/reserve-date-picker/index"
+  },
+  "main": "index.js"
+}

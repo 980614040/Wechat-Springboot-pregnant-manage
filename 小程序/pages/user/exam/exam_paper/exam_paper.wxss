@@ -1,0 +1,36 @@
+/* pages/user/exam/exam_paper/exam_paper.wxss */
+.viewtitle{
+  font-size: rpx;
+  border-top:2rpx solid white ;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  background-color: rgb(175, 252, 175);
+}
+.last{
+  border-bottom:1rpx solid lightgray ;
+}
+.info{
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  padding-bottom: 20rpx;
+  
+  
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+ 
+  
+}
+.simpledatas{
+  display: flex;
+}
+.simpledata{
+  display: 1;
+}
+button{
+  width: 100%;
+}

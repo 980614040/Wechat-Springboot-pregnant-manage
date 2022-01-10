@@ -1,0 +1,66 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/design/design",
+    "pages/userinfo/userinfo",
+    "pages/updateuser/updateuser",
+
+
+    "pages/doctor/manage/manage_user/manage_user",
+    "pages/doctor/manage/manage_userreport/manage_userreport",
+    
+    
+    "pages/admin/admin_home/admin_home",
+    "pages/admin/manage/manage_doctor/manage_doctor",
+    "pages/admin/manage/manage_user/manage_user",
+    "pages/admin/manage/manage_data/manage_data",
+    "pages/admin/manage/chart/index", 
+
+    
+    "pages/user/doctorinfo/doctorinfos",
+    "pages/user/exam/exam_appointment/exam_appointment",
+    "pages/user/exam/exam_select/exam_select",
+    "pages/user/exam/exam_report/exam_report",
+    "pages/user/exam/exam_paper/exam_paper"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",  "enablePullDownRefresh": true,
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "孕妇体检系统",
+    "navigationBarTextStyle":"black"
+  
+  },
+ 
+  "tabBar": {
+   
+    "list": [{
+      
+      "pagePath": "pages/admin/admin_home/admin_home",
+      "text": "首页",
+      "iconPath": "icon/学校.png",
+      "selectedIconPath": "icon/学校.png"
+    },{
+      "pagePath": "pages/admin/manage/chart/index",
+      "text": "体检",
+      "iconPath": "icon/通知公告.png",
+      "selectedIconPath": "icon/通知公告.png",
+      "selectedColor": "#0094ff"
+    },{
+      "pagePath": "pages/userinfo/userinfo",
+      "text": "我的",
+      "iconPath": "icon/学生.png",
+      "selectedIconPath": "icon/学生.png"
+    }
+  
+  ],
+  "selectedColor": "#0094ff"
+  },
+  "plugins": {
+    "myPlugin": {
+      "version": "1.0.0",
+      "provider": "wx84472d5652384779"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="css/bootstrap.min.css" />
+<link rel="stylesheet" th:href="@{/css/bootstrap-theme.min.css}" href="css/bootstrap-theme.min.css"/>
+<link rel="stylesheet"  th:href="@{/css/admin/admin_home.css}" href="css/admin/admin_home.css">
+<script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+<body>
+<div class="row-fluid">
+    <div class="span12">
+        <h3 class="title">
+            孕妇体检管理系统
+        </h3>
+    </div>
+</div>
+<div class="container-fluid">
+
+    <div class="row-fluid">
+        <div class="span4" style="float: left;width: 250px;">
+            <ul class="nav nav-list well list_link">
+
+                <li class="active">
+                    <a href="show_admin_home_pc">首页</a>
+                </li>
+                <li>
+                    <a th:href="@{query_user_list_pc(current_page=${1},
+                                      page_size=${10},
+                                      field_name=${'default'},
+                                      field_value=${'all'}
+                                      )}">孕妇列表</a>
+                </li>
+                <li>
+                    <a th:href="@{query_doctor_list_pc(current_page=${1},
+                                      page_size=${10},
+                                      field_name=${'default'},
+                                      field_value=${'all'}
+                                      )}">医生列表</a>
+                </li>
+
+                <li>
+                    <a href="#">报告管理</a>
+                </li>
+                <li>
+                    <a href="#">设置</a>
+                </li>
+
+                <li>
+                    <a href="#">帮助</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="span8" style="float: left;width: 69%;">
+            <div class="small_title">用户列表</div>
+            <table class="table table-bordered">
+
+
+                <form action="query_user_list_pc" method="get">
+
+
+                    <input th:name="current_page" th:value="1" type="hidden"/>
+                    <input th:name="page_size" th:value="10" type="hidden"/>
+                </form>
+
+
+
+
+                <thead>
+                <tr>
+                    <th>
+                        编号
+                    </th>
+                    <th>
+                        报告编号
+                    </th>
+                    <th>
+                        检查次数
+                    </th>
+                    <th>
+                        负责医生
+                    </th>
+                    <th>
+                        被检孕妇
+                    </th>
+                    <th>
+                        报告时间
+                    </th>
+                    <th>
+                        体重
+                    </th>
+                    <th>
+                        胎心
+                    </th>
+                    <th>
+                        血压
+                    </th>
+                    <th>
+                        宫高
+                    </th>
+                    <th>
+                        腹围
+                    </th>
+                    <th>
+                        检查项目
+                    </th>
+                    <th>
+                        项目结果
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+                </thead>
+                <tbody th:each="exam_papers, itemStat: ${exam_papers}">
+                <tr>
+                    <td th:text="${itemStat.index+1 }"></td>
+                    <td th:text="${exam_papers.paperid}"></td>
+                    <td th:text="${exam_papers.examid}"></td>
+                    <td th:text="${exam_papers.doctorid}"></td>
+                    <td th:text="${exam_papers.userid}"></td>
+                    <td th:text="${exam_papers.papaertime}"></td>
+                    <td th:text="${exam_papers.weight}"></td>
+                    <td th:text="${exam_papers.fetal_heart}"></td>
+                    <td th:text="${exam_papers.blood_pressure}"></td>
+                    <td th:text="${exam_papers.uterine_height}"></td>
+                    <td th:text="${exam_papers.abdominal_girth}"></td>
+                    <td th:text="${exam_papers.describes}"></td>
+                    <td th:text="${exam_papers.papaeratttion}"></td>
+                    <td><a th:href="@{delete_papars_pc(examid=${exam_papers.examid},
+                                      current_page=${current_page},
+                                      page_size=${page_size},
+                                      field_name=${field_name},
+                                      field_value=${field_value})}">删除</a></td>
+
+                </tr>
+
+                </tbody>
+            </table>
+            <div style="text-align: center">
+                <div style="margin-left:20px; float: left"><a th:if="${current_page}>0" th:href="@{show_papers_pc(current_page=${current_page - 10},
+                                      page_size=${page_size},
+                                      field_name=${field_name},
+                                      field_value=${field_value}
+                                      )}">上一页</a></div>
+                <div style="margin-left: 20px; float: left"><a th:href="@{show_papers_pc(current_page=${current_page + 10},
+                                      page_size=${page_size},
+                                      field_name=${field_name},
+                                      field_value=${field_value}
+                                      )}">下一页</a></div>
+                <div style="margin-left: 20px; float: left"><a href="show_addpaper_pc">添加</a></div>
+            </div>
+            <!--            <div class="alert">-->
+            <!--                <button type="button" class="close" data-dismiss="alert">×</button>-->
+            <!--                <h4>-->
+            <!--                    提示!-->
+            <!--                </h4>-->
+            <!--                <strong th:if="${userlist_option}==first">请不要随意修改数据</strong>-->
+            <!--                <strong th:if="${userlist_option}=='u_delete'">删除成功</strong>-->
+            <!--                <strong th:if="${userlist_option}=='u_insert'">添加成功</strong>-->
+            <!--            </div>-->
+        </div>
+    </div>
+</div>	</body>
+
+</body>
+</html>

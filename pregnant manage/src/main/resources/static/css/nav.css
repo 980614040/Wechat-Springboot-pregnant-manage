@@ -1,0 +1,43 @@
+body{
+	font-family: 'microsoft yahei',sans-serif;
+}
+#pic{
+	height: 50px;
+	width: 100%;
+	background-image:url(../img/bg.jpg) ;
+}
+
+.navbar-default{
+	background-color:#fff ;
+	border: none;
+	box-shadow: 0px 2px 8px 0px rgba(50,50,50,0.25);
+}
+
+.navbar-default .doctor{
+	font-size: 30px;
+	font-weight: bold;
+	color: darkseagreen;
+	height: 70px;
+	line-height: 35px;
+text-align: center;
+}
+.navbar-default .navbar-nav>li>a {
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFD8C8;
+	height: 70px;
+	line-height: 35px;
+}
+.navbar-toggle{
+	margin-top: 17px;
+}
+.navbar-default .navbar-toggle:hover {
+	border-color:#ffd8c8 ;
+	background-color: rgb(255,255,255,0);
+}
+.navbar-default .navbar-toggle .icon-bar{
+	border-color: #DFF0D8;
+}
+.container{
+	height: 500px;
+}

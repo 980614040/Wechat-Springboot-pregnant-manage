@@ -1,0 +1,3 @@
+
+<simpletable exam="{{exam}}" bindinsert="insertintosql"
+bindsearch="selectsql"  checkuserstyle="{{checkuserstyle}}"></simpletable>

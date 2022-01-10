@@ -1,0 +1,18 @@
+
+<view class="img_info_list"
+wx:for="{{users}}" wx:key="id" 
+data-index="{{index}}">
+<view class="img">
+<image mode="widthFix" src="{{item.src}}"></image>
+</view>
+<view class="info">
+
+<view>姓名：{{item.username}}</view>
+<view>怀孕时间：{{item.pregnant_time}}</view>
+<view>个人简介：{{item.describes}}</view>
+<navigator class="intoinfo"
+url="/pages/doctor/manage/manage_user/manage_user?id={{index}}"
+data-index="{{index}}">详细信息</navigator>
+
+</view>
+</view>

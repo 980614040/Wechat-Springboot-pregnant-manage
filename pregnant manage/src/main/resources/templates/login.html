@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+
+	<head base th:href="@{/}">
+		<meta charset="utf-8" />
+		<title></title>
+
+		<base href="/">
+		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" th:href="@{/css/bootstrap-theme.min.css}" href="css/bootstrap-theme.min.css"/>
+		<link rel="stylesheet" th:href="@{/css/animate.css}" href="css/animate.css"/>
+		<link rel="stylesheet" th:href="@{/css/nav.css}" href="css/nav.css"/>
+		<link rel="stylesheet" th:href="@{/css/footerNav.css}" href="css/footerNav.css" />
+		<link rel="stylesheet" th:href="@{/css/footer.css}" href="css/footer.css" />
+		<link rel="stylesheet" th:href="@{/css/body.css}"  href="css/body.css"/>
+		<link rel="stylesheet" th:href="@{/css/registe.css}"  href="css/registe.css"/>
+		<link rel="icon" type="image/x-icon" th:href="@{/static/img/tlogo.jpg}" />
+
+		<script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/npm.js}"></script>
+		<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/wow.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/jquery.singlePageNav.min.js}"></script>
+		<meta name="viewport" concent="width-device-width,initial-scale-1.0" />
+		<style>
+			img{
+				margin: auto;
+			}
+		</style>
+
+
+		<script>
+			new WOW().init();
+			$('.nav').singlePageNav({
+				offset: 50,
+				currentClass: 'current',
+				currentThreshold: 0,
+				duration: 500,
+				effect: 'swing'
+			});
+		</script>
+		<script>
+			$('.navbar-collapse a').click(function() {
+				$('.navbar-collapse').collapse('hide');
+			});
+		</script>
+		<script>
+			$(".carousel").carousel({
+				interval: 4000
+			});
+		</script>
+	</head>
+
+	<body>
+		<nav class=" navbar navbar-default navbar-fixed-top" id="">
+			<div class="">
+				<div class="navbar-header" >
+					<a href="index.html" class="navbar-brand" style="color:#0594c7 ">孕妇体检管理系统</a>
+				</div>
+					</div>
+		</nav>
+		<div  style="height: 800px">
+			<div class="title-line" style="margin-top: 80px;"><span class="tit" style="font-size: 38px;">登录</span></div>
+			<div class="login-box clearfix">
+				<div class="login-left">
+					<div class="qrcode-login">
+						<div class="qrcode-con"><i class="tv-icon"></i>
+							<div class="qrcode-box">
+								<div class="qrcode-tips"></div>
+								<div class="qrcode-img" title="">
+									<canvas width="140" height="140" style="display: none;"></canvas>
+									<img src=""
+									 style="display: block;"></div>
+								<div class="status">
+									<div class="overdue">点击刷新</div>
+									<!---->
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="line"></div>
+				<form action="check_login_pc" method="get">
+				<div class="login-right">
+					<div class="form-login">
+						<div id="geetest-wrap" class="input-box">
+							<ul>
+								<li class="item username status-box">
+									<input type="text" value="" th:name="userid" placeholder="输入账号" id="login-username"
+									 maxlength="50" autocomplete="off" class=""> <span class="status"></span>
+									<div class="text clearfix">
+										<p class="tips"></p>
+									</div>
+									<!---->
+								</li>
+								<li class="item password status-box">
+									<input type="password" th:name="pwd" placeholder="密码" id="login-passwd" class=""> <span
+									 class="status"></span>
+									<div class="text clearfix">
+										<p class="tips"></p>
+									</div>
+								</li>
+								<!---->
+								<!---->
+								<li style="margin-left: 40px;margin-bottom: 40px">
+									<input type="radio" th:name="usertype" value="admin" checked="checked" onclick="test()" style="margin-left: 40px">管理员
+									<input type="radio"  th:name="usertype" value="doctor" onclick="test()" style="margin-left: 40px">医生
+								</li>
+
+								<li class="btn-box" >
+
+									<input type="submit" th:name="loginbtn" class="btn btn-login" value="登录" style="padding: 0px; font-size: 24px; color: white;"/>
+
+									</li>
+
+
+								<!---->
+							</ul>
+						</div>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+
+
+		<div class="copy"  >
+			<div class="copy_box">
+				<p class="copy_box_left">
+					医院管理系统 &nbsp;&nbsp;&nbsp; 版权所有 &nbsp;&nbsp;&nbsp; 啥ICP备100101010号
+				</p>
+
+			</div>
+		</div>
+	</body>
+
+</html>
+
+

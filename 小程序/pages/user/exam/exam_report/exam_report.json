@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "simpletable":"../../../../components/simpletable/simpletable"
+  }
+}

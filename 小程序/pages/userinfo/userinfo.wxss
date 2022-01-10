@@ -1,0 +1,28 @@
+@import "../../icon/icfont.wxss";
+.user_info_wrap{
+  height: 250rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: gray;
+  border-bottom: 1rpx solid lightgray;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.user_info_wrap image{
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 150rpx;
+}
+.bottom view{
+  
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  padding: 5rpx;
+  font-weight: bold;
+}
+.exit{
+  
+  color: red;
+}

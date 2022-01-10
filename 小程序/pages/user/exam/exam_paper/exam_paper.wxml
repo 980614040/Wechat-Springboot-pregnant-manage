@@ -1,0 +1,54 @@
+<!--pages/user/exam/exam_paper/exam_paper.wxml-->
+<view wx:if="{{checkuserstyle=='user'}}">
+<view class="viewtitle">孕妇: <text>{{username}}</text></view>
+<view class="viewtitle">基础检查</view>
+<view class="simpledatas">
+<view class="info simpledata">体重:<text>{{weight}}</text></view>
+<view class="info simpledata">宫高:<text>{{uterine_height}}</text></view>
+<view class="info simpledata">血压:<text>{{blood_pressure}}</text></view>
+</view>
+<view class="simpledatas">
+<view class="info simpledata">腹围:<text>{{abdominal_girth}}</text></view>
+<view class="info simpledata">胎心:<text>{{fetal_heart}}</text></view>
+<view class="info simpledata"><text></text></view>
+</view>
+<view class="viewtitle">检查项目</view>
+<view class="info">{{projectname}}</view>
+<view class="viewtitle">检查内容</view>
+<view class="info">{{exam_paper[0].describes}}</view>
+<view class="viewtitle">诊断意见</view>
+<view class="info">{{exam_paper[0].papaeratttion}}</view>
+<view class="viewtitle">医生: <text>{{doctorname}}</text></view>
+<view class="last viewtitle">时间: <text>{{exam_paper[0].papaertime}}</text></view>
+
+</view>
+<view wx:else>
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="viewtitle">孕妇: <text>{{username}}</text></view>
+<view class="viewtitle">基础检查</view>
+<view class="simpledatas">
+<view class="info simpledata">体重<input  type="text" name="weight" value="{{weight}}"/></view>
+<view class="info simpledata">宫高<input  type="text" name="uterine_height" value="{{uterine_height}}"/></view>
+<view class="info simpledata">血压<input  type="text" name="blood_pressure" value="{{blood_pressure}}"/></view>
+</view>
+<view class="simpledatas">
+<view class="info simpledata">腹围<input  type="text" name="abdominal_girth" value="{{abdominal_girth}}"/></view>
+<view class="info simpledata">胎心<input  type="text" name="fetal_heart" value="{{fetal_heart}}"/></view>
+<view class="info simpledata">
+<input  type="text" />
+</view>
+</view>
+<view class="viewtitle">检查项目</view>
+<view class="info">{{projectname}}</view>
+
+<view class="viewtitle">检查内容</view>
+<input type="text" name="describes" value="{{describes}}" />
+
+<view  class="viewtitle">诊断意见</view>
+<input  type="text" name="papaeratttion" value="{{papaeratttion}}"/>
+
+<view class="viewtitle">医生: <text>{{doctorname}}</text></view>
+
+<button bindtap="insertpaper" form-type="submit" >录入</button>
+</form>
+</view>
